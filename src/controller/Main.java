@@ -16,9 +16,13 @@ public class Main {
 		
 		System.out.println(ally1.toString());
 		
-		int effectiveAttack= OperationAlly.effectiveAtack(ally1, 100);
+	//turno de ataque enemigo:
 		
-		int actualLife= OperationAlly.calculationLife(ally1, effectiveAttack);
+		int attack=200;
+		
+		OperationAlly.effectiveAtack(ally1, attack);
+		
+		int actualLife= OperationAlly.calculationLife(ally1, attack);
 		
 		System.out.println("La vida actual de " + ally1.getName() + " es: " + actualLife);
 

@@ -4,22 +4,29 @@ import model.Ally;
 
 public class OperationAlly {
 	
-	public static int effectiveAtack(Ally aliado1, int attack) {
-		int effectiveAttack = 0;
+	public static boolean effectiveAtack(Ally aliado1, int attack) {
+		boolean effectiveAttack;
 		
 		if (attack > aliado1.getArmour()) {
-			effectiveAttack = attack / 2;
+			effectiveAttack = true;
 			System.out.println("Tu ataque ha sido efectivo");
 		} else {
+			effectiveAttack= false;
 			System.out.println("Tu ataque no ha tenido efecto");
 		}
 		
 		return effectiveAttack;
 	}
 
-	public static int calculationLife(Ally aliado1, int effectiveAttack) {
+	public static int calculationLife(Ally aliado1, int attack) {
+	
+		int lifeAfterAttack = aliado1.getTotalLife() - (attack/2);
 		
-		int lifeAfterAttack = aliado1.getTotalLife() - effectiveAttack;
+		if((attack/2)>=aliado1.getTotalLife()) {
+			System.out.println(aliado1.getName() + " está muerto");
+		}else {
+			System.out.println("Tu ataque ha infringido daño a " + aliado1.getName());
+		}
 		return lifeAfterAttack;
 	}
 }

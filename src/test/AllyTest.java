@@ -10,13 +10,13 @@ class AllyTest {
 	@Test
 	void testEffectiveAtack() {
 		Ally ally1= new Ally(100, 50, "Filerea", "Elfo");
-		assertEquals(50, OperationAlly.effectiveAtack(ally1, 200));
+		assertEquals(true, OperationAlly.effectiveAtack(ally1, 200));
 	}
 
 	@Test
 	void testCalculationLife() {
 		Ally ally1= new Ally(100, 50, "Filerea", "Elfo");
-		assertEquals(50, OperationAlly.calculationLife(ally1, 50));
+		assertEquals(50, OperationAlly.calculationLife(ally1, 100));
 	}
 
 }
