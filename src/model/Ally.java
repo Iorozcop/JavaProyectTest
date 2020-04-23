@@ -8,6 +8,7 @@ public class Ally{
 	private String race;
 	
 	
+	
 
 	public Ally() {
 		super();
