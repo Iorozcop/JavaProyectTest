@@ -6,9 +6,7 @@ public class Ally{
 	private int armour;
 	private String name;
 	private String race;
-	
-	
-	
+		
 
 	public Ally() {
 		super();
