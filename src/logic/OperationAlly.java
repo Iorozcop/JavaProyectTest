@@ -29,4 +29,10 @@ public class OperationAlly {
 		}
 		return lifeAfterAttack;
 	}
+	
+	public static int extraLife(int life) {
+		int extraLife=100-life;
+		life=extraLife+life;
+		return life;
+	}
 }

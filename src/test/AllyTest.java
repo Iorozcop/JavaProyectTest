@@ -19,4 +19,8 @@ class AllyTest {
 		assertEquals(50, OperationAlly.calculationLife(ally1, 100));
 	}
 
+	@Test
+	void extraLife() {
+		assertEquals(100, OperationAlly.extraLife(50));
+	}
 }
